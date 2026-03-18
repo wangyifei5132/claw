@@ -118,8 +118,8 @@ const CITY_POP = [
   { title: 'Stay With Me', artist: 'Miki Matsubara' },
 ];
 
-const NeonCard = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
-  <div className={`relative rounded-xl border border-cyan-500/40 bg-black/70 backdrop-blur-xl shadow-[0_0_25px_rgba(6,182,212,0.2),inset_0_0_30px_rgba(6,182,212,0.05)] ${className}`}>
+const NeonCard = ({ children, className = '', style = {} }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) => (
+  <div className={`relative rounded-xl border border-cyan-500/40 bg-black/70 backdrop-blur-xl shadow-[0_0_25px_rgba(6,182,212,0.2),inset_0_0_30px_rgba(6,182,212,0.05)] ${className}`} style={style}>
     <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent" />
     {children}
   </div>
